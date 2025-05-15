@@ -11,15 +11,13 @@
         <a href="signin.html">sign in</a>
     </div>
     <div>
-        <span>ID</span>
-        <input type = "text" placeholder="가입 ID 입력" maxlength="100">
-    </div>
-    <div>
-        <span>PW</span>
-        <input type = "text" placeholder="가입 PW 입력" maxlength="100">
-    </div>
-    <div>
-        <button>가입하기</button>
+        <form action="signin.php" method="post">
+            <span>ID</span>
+            <input type = "text" name = "sid" placeholder="가입 ID 입력" maxlength="100"><br>
+            <span>PW</span>
+            <input type = "text" name = "spw" placeholder="가입 PW 입력" maxlength="100"><br>
+            <button type = "submit">가입하기</button>
+        </form>
     </div>
 </body>
 </html>
