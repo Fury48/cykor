@@ -37,12 +37,17 @@ $result = $dbconn->query($list);
         <?php if($result->num_rows>0){
             while ($row = $result->fetch_assoc()) {
                 $title = $row['title'];
-                echo "<a href='board.php?title=".urlencode($title)."'>".$title."</a>";
+                echo "<a href='board.php?title=".urlencode($title)."'>".$title."</a><br>";
             }
             }else{
                 echo"게시글이 없습니다.";
             }
         ?>
+    </div>
+    <div>
+        <form action = "write1.php" method = "post">
+            <button>글 작성하기</button>
+        </form>
     </div>
     
 </body>
