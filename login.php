@@ -22,7 +22,7 @@ $result = $dbconn->query($login);
 //로그인 완료시 세션에 사용자 저장
 if ($result->num_rows > 0) {
     $_SESSION['userid'] = $lid; // 세션에 사용자 ID 저장
-    echo '<script>alert("로그인이 완료되었습니다."); window.location.href="main.html";</script>';
+    echo '<script>alert("로그인이 완료되었습니다."); window.location.href="main.php";</script>';
 } else {
     echo '<script>alert("아이디 또는 비밀번호가 올바르지 않습니다."); window.location.href="login.html";</script>';
 }
