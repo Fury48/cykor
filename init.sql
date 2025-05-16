@@ -5,5 +5,10 @@ CREATE TABLE userinfo (
     pw VARCHAR(100)
 );
 
---예제 입력
-INSERT INTO userinfo(id,pw) VALUES ('dongjoo','1122');
+CREATE TABLE board (
+    unid INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100),
+    writer VARCHAR(100),
+    context VARCHAR(1000)
+);
+
