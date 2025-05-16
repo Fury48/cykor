@@ -13,6 +13,7 @@ session_start();
         <a href="main.php">main</a>
         <a href="login.html">login</a>
         <a href="signin.html">sign in</a>
+        <a href="logout.php">log out</a>
     </div>
     <div>
         <?php if (isset($_SESSION['userid'])): ?>
@@ -21,6 +22,7 @@ session_start();
             <p>로그인이 필요합니다.</p>
         <?php endif; ?>
     </div>
+
     
 </body>
 </html>
