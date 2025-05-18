@@ -33,11 +33,13 @@ $result = $dbconn->query($list);
             <p>로그인이 필요합니다.</p>
         <?php endif; ?>
     </div>
+    <br><h3>게시글 목록</h3>
     <div>
         <?php if($result->num_rows>0){
             while ($row = $result->fetch_assoc()) {
                 $title = $row['title'];
-                echo "<a href='board.php?title=".urlencode($title)."'>".$title."</a><br>";
+                $unid = $row['unid'];
+                echo "<a href='board.php?unid=".$unid."'>".$title."</a><br>";
             }
             }else{
                 echo"게시글이 없습니다.";
@@ -46,7 +48,7 @@ $result = $dbconn->query($list);
     </div>
     <div>
         <form action = "write1.php" method = "post">
-            <button>글 작성하기</button>
+            <br><button>글 작성하기</button>
         </form>
     </div>
     
