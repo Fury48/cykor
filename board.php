@@ -36,5 +36,14 @@ $unid = $_GET['unid'];
         echo "<p>".$row['context']."</p>";
         ?>
     </div>
+    <div>
+        <?php
+        if (isset($_SESSION['userid'])){
+            if($_SESSION['userid'] == $row['writer']) {
+                echo"수정 삭제";
+            }
+        }
+        ?>
+    </div>
 </body>
 </html>
