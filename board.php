@@ -40,7 +40,7 @@ $unid = $_GET['unid'];
         <?php
         if (isset($_SESSION['userid'])){
             if($_SESSION['userid'] == $row['writer']) {
-                echo "<button>수정</button>";
+                echo "<button onclick=\"location.href='update.php?unid=$unid'\">수정</button>";
                 echo "<button onclick=\"location.href='delete.php?unid=$unid'\">삭제</button>";
             }
         }
