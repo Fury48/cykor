@@ -1,9 +1,9 @@
 <?php
 session_start();
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'cykor';
+$host = 'db'; 
+$username = 'exampleuser'; 
+$password = 'examplepass';
+$database = 'cykor'; 
 
 $dbconn = new mysqli($host,$username,$password,$database);
 if(!$dbconn) die("DB연결 실패");
@@ -44,18 +44,6 @@ $unid = $_GET['unid'];
                 echo "<button onclick=\"location.href='delete.php?unid=$unid'\">삭제</button>";
             }
         }
-        ?>
-    </div>
-    <br><h5>댓글</h5>
-    <div>
-        <?php
-        if(isset($_SESSION['userid'])) {  
-            $writer = 1; 
-        } else {  
-            $writer = 0;  
-        }
-        echo "<span>댓글쓰기</span> <input type = \"text\" name = \"comments\" maxlength=\"500\"><br>";
-        echo "<button onclick=\"location.href='update.php?unid=$unid&writer=$writer'\">댓글 작성</button>";
         ?>
     </div>
 </body>

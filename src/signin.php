@@ -1,8 +1,9 @@
 <?php
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'cykor';
+session_start();
+$host = 'db'; 
+$username = 'exampleuser'; 
+$password = 'examplepass';
+$database = 'cykor'; 
 
 $dbconn = new mysqli($host,$username,$password,$database);
 if(!$dbconn) die("DB연결 실패");

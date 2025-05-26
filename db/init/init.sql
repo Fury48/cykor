@@ -1,14 +1,18 @@
+CREATE DATABASE IF NOT EXISTS cykor;
+
 USE cykor;
 
-CREATE TABLE userinfo (
+CREATE TABLE IF NOT EXISTS userinfo (
     id VARCHAR(100),
     pw VARCHAR(100)
 );
 
-CREATE TABLE board (
+CREATE TABLE IF NOT EXISTS board (
     unid INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(100),
     writer VARCHAR(100),
     context VARCHAR(1000)
 );
 
+GRANT ALL PRIVILEGES ON cykor.* TO 'exampleuser'@'%';
+FLUSH PRIVILEGES;

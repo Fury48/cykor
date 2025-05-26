@@ -2,11 +2,10 @@
 
 //세션 시작
 session_start();
-
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'cykor';
+$host = 'db'; 
+$username = 'exampleuser'; 
+$password = 'examplepass';
+$database = 'cykor'; 
 
 $dbconn = new mysqli($host,$username,$password,$database);
 if(!$dbconn) die("DB연결 실패");
